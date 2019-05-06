@@ -3,7 +3,7 @@ export default {
     light: '#ffbcaf',
     main: '#ff8a65',
     dark: '#c85a54',
-    text: '#fafafa'
+    text: '#fafafa',
   },
   secondary: {
     light: '#6effe8',
@@ -15,6 +15,6 @@ export default {
   text: {
     light: '#fafafa',
     main: '#9e9e9e',
-    dark: '#111'
-  }
-}
+    dark: '#111',
+  },
+};
