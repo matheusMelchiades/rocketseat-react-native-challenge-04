@@ -17,4 +17,12 @@ export default {
     main: '#9e9e9e',
     dark: '#111',
   },
+  header: {
+    flex: 1,
+    textAlign: 'center',
+    justifyContent: 'space-between',
+    color: '#ff8a65',
+    fontSize: 25,
+    fontWeight: 'bold',
+  },
 };

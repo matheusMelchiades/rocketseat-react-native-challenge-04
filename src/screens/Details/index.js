@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, Text } from 'react-native';
-import Header from '../../components/Header';
+import styleApp from '../../config/style';
+import {
+  Container, Card, CardMidia,
+  CardContent, Name, Brand, Price, ButtonAddCart, TitleButton,
+} from './styles';
+
 
 export default class Details extends Component {
   static navigationOptions = {
-    headerTitle: <Header title="Detalhe do produto" />,
+    headerTitle: 'Detalhe do produto',
+    headerTitleStyle: { ...styleApp.header, flex: 0 },
   }
 
   static propTypes = {
@@ -23,16 +28,22 @@ export default class Details extends Component {
 
   render() {
     const { product } = this.state;
-    return (
-      <View>
-        <Text>
-          DETAILS
 
-          {
-            JSON.stringify(product, null, 4)
-          }
-        </Text>
-      </View>
+    return (
+      <Container>
+        <Card>
+          <CardMidia source={{ uri: product.image }} />
+          <CardContent>
+            <Name>{product.name}</Name>
+            <Brand>{product.brand}</Brand>
+            <Price>{product.price}</Price>
+
+            <ButtonAddCart>
+              <TitleButton>Adicionar ao carrinho</TitleButton>
+            </ButtonAddCart>
+          </CardContent>
+        </Card>
+      </Container>
     );
   }
 }

@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styleApp from '../../config/style';
 import API from '../../services/api';
 import {
   Container,
 } from './styles';
 import Categories from '../../components/Categories';
 import Products from '../../components/Products';
-import Header from '../../components/Header';
 
 export default class Main extends Component {
   static navigationOptions = {
-    headerTitle: <Header title="GoCommerce" />,
+    headerTitle: 'GoCommerce',
+    headerTitleStyle: styleApp.header,
   }
 
   static propTypes = {
